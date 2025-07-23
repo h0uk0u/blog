@@ -1,0 +1,38 @@
+.main{
+  top: 0;
+  display: flex;
+}
+
+.top{
+  background-color: #0f003a;
+  height: 120px;
+  width: 100%;
+}
+
+.top p{
+  font-size: 100px;
+}
+
+@media (max-width: 1500px) {
+    .top {
+        height: 80px;
+    }
+
+    .top p{
+      font-size: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top {
+        height: 50px;
+    }
+
+    .top p{
+      font-size: 40px;
+    }
+}
+
+.header{
+  position: absolute;
+}
