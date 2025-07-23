@@ -4,6 +4,7 @@
     overflow: clip;
 }
 
+/* 押すボタン */
 .fusion-button {
     position: fixed;
     top: 0;
@@ -31,71 +32,147 @@
     }
 }
 
-.fusion-button-inner {
-    position: relative;
-    top: 40px;
-    right: 40px;
+.btn-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+  left: -15px;
+  top: 15px; 
+}
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  border-radius: 4px;
+}
+.btn-trigger, .btn-trigger span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.btn-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0;
 }
 
-@media (max-width: 1500px) {
-    .fusion-button-inner {
-        top: 32px;
-        right: 20px;
-    }
+#btn07 span:nth-of-type(1) {
+  -webkit-animation: btn07-bar01 .75s forwards;
+  animation: btn07-bar01 .75s forwards;
 }
-
-@media (max-width: 767px) {
-    .fusion-button-inner {
-        top: 20px;
-        right: 20px;
-    }
+@-webkit-keyframes btn07-bar01 {
+  0% {
+    -webkit-transform: translateY(20px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
 }
-
-/* トグル状態時の変化 */
-.fusion-active.fusion-button .fusion-bar-top {
-    transform: translateY(12px);
+@keyframes btn07-bar01 {
+  0% {
+    transform: translateY(20px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
-
-@media (max-width: 1500px) {
-    .fusion-active.fusion-button .fusion-bar-top {
-        transform: translateY(8px);
-    }
+#btn07 span:nth-of-type(2) {
+  transition: all .25s .25s;
+  opacity: 1;
 }
-
-@media (max-width: 767px) {
-    .fusion-active.fusion-button .fusion-bar-top {
-        transform: translateY(5px);
-    }
+#btn07 span:nth-of-type(3) {
+  -webkit-animation: btn07-bar03 .75s forwards;
+  animation: btn07-bar03 .75s forwards;
 }
-
-.fusion-active.fusion-button .fusion-bar-bottom {
-    transform: translateY(-12px);
+@-webkit-keyframes btn07-bar03 {
+  0% {
+    -webkit-transform: translateY(-20px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-20px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
 }
-
-@media (max-width: 1500px) {
-    .fusion-active.fusion-button .fusion-bar-bottom {
-        transform: translateY(-8px);
-    }
+@keyframes btn07-bar03 {
+  0% {
+    transform: translateY(-20px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
-
-@media (max-width: 767px) {
-    .fusion-active.fusion-button .fusion-bar-bottom {
-        transform: translateY(-5px);
-    }
+#btn07.active span:nth-of-type(1) {
+  -webkit-animation: active-btn07-bar01 .75s forwards;
+  animation: active-btn07-bar01 .75s forwards;
 }
-
-.fusion-button span {
-    display: block;
-    height: 8px;
-    margin-left: auto;
-    background-color: #000000;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+@-webkit-keyframes active-btn07-bar01 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px) rotate(45deg);
+  }
 }
-
-@media (max-width: 767px) {
-    .fusion-button span {
-        height: 4px;
-    }
+@keyframes active-btn07-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(20px) rotate(0);
+  }
+  100% {
+    transform: translateY(20px) rotate(45deg);
+  }
+}
+#btn07.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#btn07.active span:nth-of-type(3) {
+  -webkit-animation: active-btn07-bar03 .75s forwards;
+  animation: active-btn07-bar03 .75s forwards;
+}
+@-webkit-keyframes active-btn07-bar03 {
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px) rotate(-45deg);
+  }
+}
+@keyframes active-btn07-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0);
+  }
+  100% {
+    transform: translateY(-20px) rotate(-45deg);
+  }
 }
 
 .fusion-button .fusion-bar-top {
