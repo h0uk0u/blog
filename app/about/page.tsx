@@ -1,10 +1,15 @@
 'use client'
 import Image from "next/image"
 import "./about.css"
+import Header from "@/components/Header/Header"
 
 export default function about() {
     return(
         <div className="main">
+            <Header
+                title="ABOUT"
+                backgroundImage="/header/header-1.png"
+            />
             <div className="about-me">
                 <h2>私について</h2>
                 <p>音ゲーが好きな人。このウェブサイトも趣味です。</p>
