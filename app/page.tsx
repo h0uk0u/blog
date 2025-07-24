@@ -4,9 +4,6 @@ import "./homepage.css";
 export default function Home() {
   return (
     <div className="main">
-      <header className="header">
-        <p>A</p>
-      </header>
       <div className="top">
         <div className="top-image">
           <Image

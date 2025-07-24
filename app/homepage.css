@@ -5,36 +5,6 @@
 
 }
 
-.header{
-  background-color: #4bc6ff;
-  height: 120px;
-  width: 100%;
-}
-
-.header p{
-  font-size: 100px;
-}
-
-@media (max-width: 1500px) {
-    .header {
-        height: 80px;
-    }
-
-    .header p{
-      font-size: 70px;
-    }
-}
-
-@media (max-width: 767px) {
-    .header {
-        height: 50px;
-    }
-
-    .header p{
-      font-size: 40px;
-    }
-}
-
 .top{
   position: relative;
 }
