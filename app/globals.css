@@ -13,3 +13,13 @@ html, body {
 body {
   overflow-x: hidden; /* 横スクロールを防止 */
 }
+
+/* リンクの下線を消し、訪問済みでも色を変えない */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
