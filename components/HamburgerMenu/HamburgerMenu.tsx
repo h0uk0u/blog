@@ -51,7 +51,7 @@ const HamburgerMenu: React.FC = () => {
                                         <a href="/">TOP</a>
                                     </li>
                                     <li className="fusion-item">
-                                        <a href="/map">MAP</a>
+                                        <a href="/article">ARTICLE</a>
                                     </li>
                                     <li className="fusion-item">
                                         <a href="/about">ABOUT</a>
